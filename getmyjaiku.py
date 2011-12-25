@@ -23,8 +23,8 @@ if __name__ == '__main__':
 
         japi = jaiku.Api(username=args.username, api_key=API_KEY)
         presence = japi.GetUserFeed(args.username)
-        print(presence)
+        for p in presence:
+            print(p) 
 
-    except Exception:
-        print("FUUUUU")
- 
+    except Exception as e:
+        print(e.message)
